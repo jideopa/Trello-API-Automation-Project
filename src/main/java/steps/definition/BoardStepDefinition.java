@@ -10,8 +10,8 @@ public class BoardStepDefinition {
     public void aValidGetRequestIsSendToServer() {
         boardStep.createABoard();
         boardStep.storeBoardID();
-        boardStep.getABoardWithThread();
-        boardStep.deleteBoardWithThread();
+        boardStep.getBoard();
+        boardStep.deleteBoard();
     }
     @Then("a response body is received with {int} status")
     public void aResponseIsReceivedWithStatus(int statusCode) {
@@ -22,14 +22,12 @@ public class BoardStepDefinition {
     public void aValidPostMethodRequestIsSendToServer(){
         boardStep.createABoard();
         boardStep.storeBoardID();
-        boardStep.deleteBoardWithThread();
+        boardStep.deleteBoard();
 
     }
 
     @Given("a valid Delete Method is send to sever")
     public void aValidDeleteMethodIsSendToSever(){
-        boardStep.createABoard();
-        boardStep.storeBoardID();
-        boardStep.deleteBoardWithThread();
+        aValidPostMethodRequestIsSendToServer();
     }
 }

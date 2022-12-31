@@ -4,8 +4,8 @@ import com.github.javafaker.Faker;
 
 public class DataGenerator {
 
-    public static DataGenerator dataGenerator = null;
-    public Faker faker = new Faker();
+    private static DataGenerator dataGenerator = null;
+     public Faker faker = new Faker();
 
     private DataGenerator(){
 
